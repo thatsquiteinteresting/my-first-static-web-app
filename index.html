@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nothing Yet</title>
+  <title>Nothing Yet - Colorful Spiral</title>
   <style>
     body {
       font-family: sans-serif;
@@ -10,19 +10,20 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      background-color: #181818; /* Dark background */
     }
 
     .spiral {
       position: relative;
-      width: 200px;
-      height: 200px;
+      width: 400px; /* Increased size */
+      height: 400px;
     }
 
     .spiral span {
       position: absolute;
       transform-origin: 50% 50%;
-      font-size: 12px;
-      opacity: 0.5;
+      font-size: 18px; 
+      opacity: 0.7; 
     }
   </style>
 </head>
@@ -32,25 +33,29 @@
     <script>
       let angle = 0;
       let radius = 0;
-      let step = 0.1; 
+      let step = 0.1;
 
       function createText() {
         const span = document.createElement('span');
         span.textContent = "nothing yet";
 
+        // Random color for each text element
+        const randomColor = `hsl(${Math.random() * 360}, 50%, 50%)`; 
+        span.style.color = randomColor; 
+
         const x = Math.cos(angle) * radius;
         const y = Math.sin(angle) * radius;
 
-        span.style.left = `${x + 100}px`; // Center the spiral
-        span.style.top = `${y + 100}px`; 
+        span.style.left = `${x + 200}px`; // Center the spiral
+        span.style.top = `${y + 200}px`; 
         span.style.transform = `rotate(${angle}rad)`; 
 
         angle += step;
-        radius += step * 5; // Adjust for spiral radius increase
+        radius += step * 5; 
 
         document.querySelector('.spiral').appendChild(span);
 
-        if (radius < 200) { // Limit spiral size
+        if (radius < 400) { // Adjust limit for increased size
           requestAnimationFrame(createText);
         }
       }
