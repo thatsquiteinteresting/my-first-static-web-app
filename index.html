@@ -1,68 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Maintenance mode!</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #181818; /* Dark background */
-    }
-
-    .spiral {
-      position: relative;
-      width: 400px; /* Increased size */
-      height: 400px;
-    }
-
-    .spiral span {
-      position: absolute;
-      transform-origin: 50% 50%;
-      font-size: 18px; 
-      opacity: 0.7; 
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="container">
+    <div class="profile">
+      <div class="profile_container">
+        <div class="profile_profileImg">
+          <img src="./images/profileImage.png" alt="Fromenteau Matthieu">
+        </div>
+        <div>
+          <h1 class="profile_name">
+            <span class="profile_name_firstName">Matthieu</span>
+            <span class="profile_name_lastName">Fromenteau</span>
+          </h1>
+          <p class="profile_title">Technical Support</p>
+          <p class="description profile_description">
+            <li>Highly adaptable and quick to learn, with excellent teamwork skills and the ability to work independently.</li> 
+            <li>Demonstrated problem-solving expertise with a strong customer-focused approach. </li>
+            <li>Possess effective written and verbal communication skills, i'am enthusiastic and dedicated to delivering quality resul.ts</li>
+          </p>
+          <a class="downloadBtn" href="./cv.pdf" download="Resume.pdf">Download Resume</a>
+        </div>
+      </div>
+    </div>
+    <div class="group-1">
+      <div class="skills">
+        <h3 class="title">Expertise</h3>
+        <ul class="skills_list description">
+          <li>Operating Systems: Windows11
+            Windows Server 2022 Linux
+            (Debian/Ubuntu)</li>
+          <li>Cloud Computing:Microsoft Azure
+            environment</li>
+          <li>Networking&Systems:VMware
+            ESXServer, Cisco, Nagios, Centreon</li>
+          <li>Languages: knowledge in Bash,
+            SQL, Python</li>
+        </ul>
+      </div>
+      <div class="exp">
+        <h3 class="title">Experience</h3>
+        <div class="exp_item">
+          <p class="item_preTitle">May 2022 - present</p>
+          <h4 class="item_title"> Kelio - France</h4>
+          <p class="item_subtitle">Technical Support</p>
+          <p class=" description">
+            <li>Provide end-to-end technical support for Kelio’s HRIS, Time and Attendance, and Access Control solutions, assisting clients in French, Spanish, and English.</li>
+            <li>Troubleshoot network integration issues to ensure seamless connectivity between Kelio solutions and client infrastructures.</li>
+            <li>Diagnose and resolve hardware issues with proprietary devices such as clocking terminals and access readers.</li>
+            <li>Assist with the setup, customization, and troubleshooting of Kelio software to address anomalies and ensure smooth operations.</li>
+            <li>Deliver superior customer service and technical solutions, contributing to operational efficiency across client systems.</li>
+          </p>
+        </div>
+        <div class="exp_item">
+          <p class="item_preTitle">January 2021 - November 2021</p>
+          <h4 class="item_title">Sitel - Remote</h4>
+          <p class="item_subtitle">User support</p>
+          <p class="description">
+            <li>Provide IT support for Sitel clients in French, English, and Spanish across various systems, ensuring
+            ssues are resolved efficiently.</li>
+           <li>Assist with technical documentation and translations for internal
+            procedures.</li>
+          </p>
+        </div>
+        <div class="exp_item">
+          <p class="item_preTitle">September 2016 - August 2018</p>
+          <h4 class="item_title">Accenture - Sevilla (Spain)</h4>
+          <p class="item_subtitle">IT System Support</p>
+          <p class="description">
+           <li>Deliver technical support for Amadeus clients, with an emphasis on network and system issues in French, English, and Spanish</li> 
+          <li>Assist with technical documentation and translations for internal procedures.</li>
 
-  <div class="spiral">
-    <script>
-      let angle = 0;
-      let radius = 0;
-      let step = 0.1;
+          </p>
+        </div>
+        <div class="exp_item">
+          <p class="item_preTitle">November 2013 - August 2015</p>
+          <h4 class="item_title">NetApp - Newcastle (UK)</h4>
+          <p class="item_subtitle">System Support Engineer</p>
+          <p class="description">
+            <li>Deliver advanced systems and software support, diagnosing issues related to SAN fabric, network environments, VMware platforms, and backup solutions.</li>
+            <li>Support integration and troubleshooting of NetApp storage solutions, resolving technical issues across various operating systems (Windows, Linux) and virtualization platforms (VMware).</li>
 
-      function createText() {
-        const span = document.createElement('span');
-        span.textContent = "nothing yet";
+          </p>
+        </div>
 
-        // Random color for each text element
-        const randomColor = `hsl(${Math.random() * 360}, 50%, 50%)`; 
-        span.style.color = randomColor; 
+    </div>
 
-        const x = Math.cos(angle) * radius;
-        const y = Math.sin(angle) * radius;
+    <div class="group-2">
+      <div class="edu">
+        <h3 class="title">Education</h3>
+        <div class="edu_item">
+          <p class="item_preTitle">2010-2011</p>
+          <h4 class="item_title">BSC in Networking and System administration</h4>
+          <p class="item_subtitle">
+            University of Nantes
+          </p>
+        </div>
+        <div class="edu_item">
+          <p class="item_preTitle">2008-2010</p>
+          <h4 class="item_title">Undergraduate in Networking and System administration</h4>
+          <p class="item_subtitle">
+            Lycée Guy Chauvet
+          </p>
+        </div>
+      </div>
+      
+      
+      <div class="lang">
+        <h3 class="title">Languages</h3>
+        <div class="lang_items">
+          <div class="lang_item">
+            <span>French</span>
+            <span>Native</span>
+          </div>
+          <div class="lang_item">
+            <span>English</span>
+            <span>Fluent</span>
+          </div>
+          <div class="lang_item">
+            <span>Spanish</span>
+            <span>Fluent</span>
+          </div>
+        </div>
 
-        span.style.left = `${x + 200}px`; // Center the spiral
-        span.style.top = `${y + 200}px`; 
-        span.style.transform = `rotate(${angle}rad)`; 
+      <div class="interest">
+        <h3 class="title">Interest</h3>
+        <div class="interest_items">
+          <div class="interest_item">
+            <i data-feather="music"></i>
+            <span>Music</span>
+          </div>
+          <div class="interest_item">
+            <i data-feather="book"></i>
+            <span>Books</span>
+          </div>
+          <div class="interest_item">
+            <i data-feather="map"></i>
+            <span>Travel</span>
+          </div>
+        </div>
 
-        angle += step;
-        radius += step * 5; 
-
-        document.querySelector('.spiral').appendChild(span);
-
-        if (radius < 400) { // Adjust limit for increased size
-          requestAnimationFrame(createText);
-        }
-      }
-
-      requestAnimationFrame(createText); 
-    </script>
+      </div>
+    </div>
+    <hr>
+    <div class="group-3">
+      <div class="contact">
+        <h3 class="title">Contact</h3>
+        <div class="contact_info">
+          <p class="description">
+            Aracena - Spain
+          </p>
+          <p class="description">
+            +337 70 80 90 96
+          </p>
+          <p class="description">
+            matthieu@fromenteau.net
+          </p>
+        </div>
+      </div>
+      <div class="social">
+        <h3 class="title">Socials</h3>
+        <div class="social_items">
+          <a href="https://github.com/thatsquiteinteresting/" target="_b" class="social_item">
+            <i data-feather="github"></i>
+            <span></span>
+          </a>
+          <a href="#" target="_blank" class="social_item">
+            <i data-feather="twitter"></i>
+            <span></span>
+          </a>
+          <a href="www.linkedin.com/in/matthieu-fromenteau-4599b37a" target="_blank" class="social_item">
+            <i data-feather="linkedin"></i>
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-
+  <script>
+    feather.replace()
+  </script>
 </body>
+
 </html>
