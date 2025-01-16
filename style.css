@@ -18,6 +18,10 @@ body {
 	color: white;
 }
 
+.hidden-phone {
+  display: none;
+}
+
 /* common styles */
 img {
 	width: 100%;
